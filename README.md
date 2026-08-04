@@ -73,6 +73,18 @@ Now, XSStrike can be used at any time as follows:
 python xsstrike.py
 ```
 
+### Docker
+
+A prebuilt image is published on Docker Hub:
+```
+docker run --rm sreenath92/xsstrike:latest -u "https://example.com" --skip
+```
+Or build it locally from this repo:
+```
+docker build -t xsstrike:local .
+docker run --rm xsstrike:local -u "https://example.com" --skip
+```
+
 ### Documentation
 - [Usage](https://github.com/s0md3v/XSStrike/wiki/Usage)
 - [Compatibility & Dependencies](https://github.com/s0md3v/XSStrike/wiki/Compatibility-&-Dependencies)
