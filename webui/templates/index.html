@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>XSStrike Web</title>
+    <style>
+        body { font-family: sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        input[type=text] { width: 70%; padding: 8px; }
+        button { padding: 8px 16px; }
+        pre { background: #111; color: #eee; padding: 16px; overflow-x: auto; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>XSStrike Web</h1>
+    <form method="post">
+        <input type="text" name="target_url" placeholder="https://example.com/page?param=value" value="{{ target_url }}" required>
+        <button type="submit">Scan</button>
+    </form>
+    {% if output %}
+    <h2>Results</h2>
+    <pre>{{ output }}</pre>
+    {% endif %}
+</body>
+</html>
